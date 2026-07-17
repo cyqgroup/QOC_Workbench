@@ -1,0 +1,13 @@
+{
+  "ah_maxiter": 12,
+  "ah_method": "powell",
+  "alpha_bound": 10.0,
+  "cd_mode": "commutator",
+  "no_metrics": false,
+  "oi_maxiter": 40,
+  "oi_method": "powell",
+  "oi_mode": "optimize",
+  "skip_ah": false,
+  "steps": 40,
+  "total_time": 3.0
+}

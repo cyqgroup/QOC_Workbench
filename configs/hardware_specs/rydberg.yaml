@@ -1,0 +1,75 @@
+{
+  "hardware": "rydberg",
+  "frozen_layers": {
+    "hardware_constraints": [
+      "allowed_channels",
+      "control_constraints",
+      "physical_param_constraints",
+      "time_series_constraints"
+    ]
+  },
+  "editable_search_layers": {
+    "hardware_level": [
+      "choose among allowed control channels",
+      "choose time-dependent coefficient shapes for allowed channels",
+      "use optional auxiliary cd channel if task permits"
+    ]
+  },
+  "allowed_parameterizations": {
+    "omega": ["trapezoid", "smooth", "fourier", "piecewise", "spline"],
+    "delta": ["linear", "smooth", "fourier", "piecewise", "spline"]
+  },
+  "allowed_cd_kinds": ["none", "acqc_j0", "analytical", "parameterized"],
+  "allowed_cd_orders": ["unspecified", "first_order"],
+  "allowed_channels": [
+    "omega",
+    "delta"
+  ],
+  "control_constraints": {
+    "omega": {
+      "nonnegative": true,
+      "value_range": [0.0, 1.0]
+    },
+    "delta": {
+      "value_range": [-1.0, 1.0]
+    }
+  },
+  "physical_param_constraints": {
+    "omega0": {
+      "nonnegative": true,
+      "range": [0.0, 1.0]
+    },
+    "delta0": {
+      "range": [-1.0, 1.0]
+    },
+    "interaction_v": {
+      "nonnegative": true
+    }
+  },
+  "time_series_constraints": {
+    "omega": {
+      "nonnegative_over_time": true,
+      "value_range_over_time": [0.0, 1.0]
+    },
+    "delta": {
+      "value_range_over_time": [-1.0, 1.0]
+    },
+    "cd": {
+      "value_range_over_time": [-5.0, 5.0]
+    }
+  },
+  "search_preferences": {
+    "primary_reward": "maximize_final_ground_subspace_fidelity",
+    "degenerate_ground_space_reward": true,
+    "prefer_translation_symmetric_pauli_controls": true,
+    "translation_symmetry_only_if_compatible_with_task": true,
+    "prefer_smooth_hamiltonian_path": true,
+    "avoid_unnecessary_hard_restrictions": true,
+    "metric_tie_tolerance": 1e-6,
+    "ranking_tie_break_order": [
+      "translation_symmetry_score",
+      "smoothness_score",
+      "simplicity_score"
+    ]
+  }
+}

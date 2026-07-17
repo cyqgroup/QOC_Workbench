@@ -1,0 +1,58 @@
+{
+  "hardware": "abstract_spin",
+  "frozen_layers": {
+    "hardware_constraints": [
+      "allowed_channels",
+      "control_constraints",
+      "physical_param_constraints",
+      "time_series_constraints"
+    ]
+  },
+  "editable_search_layers": {
+    "hardware_level": [
+      "choose schedule path parameterization",
+      "choose cd strength profile if task permits"
+    ]
+  },
+  "allowed_parameterizations": {
+    "schedule": ["linear", "fourier", "piecewise", "spline"],
+    "cd_strength": ["constant", "linear", "fourier", "piecewise", "spline"]
+  },
+  "allowed_cd_kinds": ["none", "analytical", "parameterized"],
+  "allowed_cd_orders": ["unspecified", "first_order", "second_order"],
+  "allowed_channels": [
+    "schedule",
+    "cd_strength"
+  ],
+  "control_constraints": {
+    "schedule": {
+      "value_range": [0.0, 1.0]
+    },
+    "cd_strength": {
+      "value_range": [-5.0, 5.0]
+    }
+  },
+  "physical_param_constraints": {},
+  "time_series_constraints": {
+    "schedule": {
+      "value_range_over_time": [0.0, 1.0]
+    },
+    "cd_strength": {
+      "value_range_over_time": [-5.0, 5.0]
+    }
+  },
+  "search_preferences": {
+    "primary_reward": "maximize_final_ground_state_fidelity",
+    "degenerate_ground_space_reward": true,
+    "prefer_translation_symmetric_pauli_controls": true,
+    "translation_symmetry_only_if_compatible_with_task": true,
+    "prefer_smooth_hamiltonian_path": true,
+    "avoid_unnecessary_hard_restrictions": true,
+    "metric_tie_tolerance": 1e-6,
+    "ranking_tie_break_order": [
+      "translation_symmetry_score",
+      "smoothness_score",
+      "simplicity_score"
+    ]
+  }
+}

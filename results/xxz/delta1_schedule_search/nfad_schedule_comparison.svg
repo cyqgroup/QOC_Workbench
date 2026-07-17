@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="540" y="26" font-size="18" text-anchor="middle" font-family="Arial">XXZ T=3, Δ=1 schedule variants (y-axis 0.9–1.0)</text>
+<line x1="130" y1="390.00" x2="1040" y2="390.00" stroke="#e5e7eb"/><text x="120" y="394.00" font-size="12" text-anchor="end" font-family="Arial">0.90</text>
+<line x1="130" y1="320.40" x2="1040" y2="320.40" stroke="#e5e7eb"/><text x="120" y="324.40" font-size="12" text-anchor="end" font-family="Arial">0.92</text>
+<line x1="130" y1="250.80" x2="1040" y2="250.80" stroke="#e5e7eb"/><text x="120" y="254.80" font-size="12" text-anchor="end" font-family="Arial">0.94</text>
+<line x1="130" y1="181.20" x2="1040" y2="181.20" stroke="#e5e7eb"/><text x="120" y="185.20" font-size="12" text-anchor="end" font-family="Arial">0.96</text>
+<line x1="130" y1="111.60" x2="1040" y2="111.60" stroke="#e5e7eb"/><text x="120" y="115.60" font-size="12" text-anchor="end" font-family="Arial">0.98</text>
+<line x1="130" y1="42.00" x2="1040" y2="42.00" stroke="#e5e7eb"/><text x="120" y="46.00" font-size="12" text-anchor="end" font-family="Arial">1.00</text>
+<line x1="130" y1="122.29" x2="1040" y2="122.29" stroke="#b35c00" stroke-dasharray="5 5"/><text x="1035" y="116.29" font-size="12" text-anchor="end" fill="#b35c00" font-family="Arial">N target</text>
+<line x1="130" y1="42" x2="130" y2="390" stroke="#333"/><line x1="130" y1="390" x2="1040" y2="390" stroke="#333"/>
+<polyline points="205.83,226.74 357.50,118.90 509.17,87.15 660.83,77.67 812.50,114.94 964.17,105.20" fill="none" stroke="#315efb" stroke-width="3"/>
+<circle cx="205.83" cy="226.74" r="5" fill="#315efb"/><text x="205.83" y="214.74" font-size="11" text-anchor="middle" fill="#315efb" font-family="Arial">0.9469</text>
+<circle cx="357.50" cy="118.90" r="5" fill="#315efb"/><text x="357.50" y="106.90" font-size="11" text-anchor="middle" fill="#315efb" font-family="Arial">0.9779</text>
+<circle cx="509.17" cy="87.15" r="5" fill="#315efb"/><text x="509.17" y="75.15" font-size="11" text-anchor="middle" fill="#315efb" font-family="Arial">0.9870</text>
+<circle cx="660.83" cy="77.67" r="5" fill="#315efb"/><text x="660.83" y="65.67" font-size="11" text-anchor="middle" fill="#315efb" font-family="Arial">0.9898</text>
+<circle cx="812.50" cy="114.94" r="5" fill="#315efb"/><text x="812.50" y="102.94" font-size="11" text-anchor="middle" fill="#315efb" font-family="Arial">0.9790</text>
+<circle cx="964.17" cy="105.20" r="5" fill="#315efb"/><text x="964.17" y="93.20" font-size="11" text-anchor="middle" fill="#315efb" font-family="Arial">0.9818</text>
+<polyline points="205.83,119.50 357.50,114.67 509.17,81.26 660.83,93.09 812.50,88.70 964.17,108.76" fill="none" stroke="#087f5b" stroke-width="3"/>
+<circle cx="205.83" cy="119.50" r="5" fill="#087f5b"/><text x="205.83" y="135.50" font-size="11" text-anchor="middle" fill="#087f5b" font-family="Arial">0.9777</text>
+<circle cx="357.50" cy="114.67" r="5" fill="#087f5b"/><text x="357.50" y="130.67" font-size="11" text-anchor="middle" fill="#087f5b" font-family="Arial">0.9791</text>
+<circle cx="509.17" cy="81.26" r="5" fill="#087f5b"/><text x="509.17" y="97.26" font-size="11" text-anchor="middle" fill="#087f5b" font-family="Arial">0.9887</text>
+<circle cx="660.83" cy="93.09" r="5" fill="#087f5b"/><text x="660.83" y="109.09" font-size="11" text-anchor="middle" fill="#087f5b" font-family="Arial">0.9853</text>
+<circle cx="812.50" cy="88.70" r="5" fill="#087f5b"/><text x="812.50" y="104.70" font-size="11" text-anchor="middle" fill="#087f5b" font-family="Arial">0.9866</text>
+<circle cx="964.17" cy="108.76" r="5" fill="#087f5b"/><text x="964.17" y="124.76" font-size="11" text-anchor="middle" fill="#087f5b" font-family="Arial">0.9808</text>
+<text x="205.83" y="448" font-size="10" text-anchor="middle" font-family="Arial">Recorded baseline OI</text><text x="205.83" y="463" font-size="10" text-anchor="middle" font-family="Arial">+ AH + CD</text>
+<text x="357.50" y="448" font-size="10" text-anchor="middle" font-family="Arial">OI + AH</text><text x="357.50" y="463" font-size="10" text-anchor="middle" font-family="Arial">+ TargetCatalyst + commutator-CD</text>
+<text x="509.17" y="448" font-size="10" text-anchor="middle" font-family="Arial">target + mixed</text><text x="509.17" y="463" font-size="10" text-anchor="middle" font-family="Arial">power p0.7 m0.5</text>
+<text x="660.83" y="448" font-size="10" text-anchor="middle" font-family="Arial">target +</text><text x="660.83" y="463" font-size="10" text-anchor="middle" font-family="Arial">power p1.2</text>
+<text x="812.50" y="448" font-size="10" text-anchor="middle" font-family="Arial">target + mixed</text><text x="812.50" y="463" font-size="10" text-anchor="middle" font-family="Arial">power p1.4 m0.5</text>
+<text x="964.17" y="448" font-size="10" text-anchor="middle" font-family="Arial">target +</text><text x="964.17" y="463" font-size="10" text-anchor="middle" font-family="Arial">sine pos</text>
+<rect x="880" y="42" width="145" height="54" fill="white" stroke="#d8dee9" rx="8"/><line x1="894" y1="62" x2="934" y2="62" stroke="#315efb" stroke-width="3"/><text x="942" y="66" font-size="13" font-family="Arial">N</text><line x1="894" y1="82" x2="934" y2="82" stroke="#087f5b" stroke-width="3"/><text x="942" y="86" font-size="13" font-family="Arial">F_ad</text></svg>

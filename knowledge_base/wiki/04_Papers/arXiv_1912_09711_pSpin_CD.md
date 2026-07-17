@@ -1,0 +1,27 @@
+# arXiv 1912 09711 pSpin CD
+
+## Type
+
+Paper Note
+
+## Purpose
+
+This entry records paper-level knowledge that can be reused as search-loop context, including Hamiltonian families, controls, metrics, and implementation cautions.
+
+## Workbench-Relevant Content
+
+- Identify the Hamiltonian terms, control channels, and constraints before running a search.
+- Specify objective metrics and stop rules explicitly in the task specification.
+- Store accepted and rejected candidates as auditable artifacts.
+- Prefer backend-verified simulations over unvalidated heuristic claims.
+
+## Related Entries
+
+- [arXiv:1912.09711](https://arxiv.org/abs/1912.09711)
+- [Counter-diabatic Driving](../02_Strategies/Counter-diabatic_Driving.md)
+- [Local Counter-Diabatic Driving (arXiv:1607.05687)](./arXiv_1607_05687_Local_CD.md)
+- [Fighting Exponentially Small Gaps (arXiv:2410.02520)](./arXiv_2410_02520_CD_Small_Gaps.md)
+
+## Status
+
+English scaffold generated during repository language cleanup. Expand with task-specific details when this note is used in a new search run.

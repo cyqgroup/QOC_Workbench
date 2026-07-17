@@ -1,0 +1,41 @@
+{
+  "candidate_id": "beta_early_s0p15",
+  "task_id": "rydberg_mis_c10",
+  "family": "smooth_beta_global_y",
+  "hardware": "rydberg",
+  "total_time": 30.0,
+  "channels": [
+    {
+      "name": "omega",
+      "basis": "smooth",
+      "params": {}
+    },
+    {
+      "name": "delta",
+      "basis": "smooth",
+      "params": {}
+    }
+  ],
+  "cd": {
+    "kind": "y_sum_parameterized",
+    "ansatz": null,
+    "order": "first_order",
+    "params": {
+      "basis": "smooth_beta",
+      "scale": 0.15,
+      "p": 1.6,
+      "q": 2.4
+    }
+  },
+  "constraints": {
+    "omega_nonnegative": true,
+    "interaction_v_time_independent": true,
+    "auxiliary_terms": "global one-body Y quadrature only"
+  },
+  "provenance": {
+    "source": "run_single_c10_candidate"
+  },
+  "notes": [
+    "single candidate C10 refinement"
+  ]
+}

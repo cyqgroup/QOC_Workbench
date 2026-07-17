@@ -1,0 +1,42 @@
+# Python
+docs/reproduction.md
+scripts
+codex_autonomous_task_template.md
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# LaTeX generated files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Runtime outputs
+artifacts/**
+!artifacts/
+!artifacts/.gitkeep
+results/**/*.html
+
+# Local/private manuscript publishing material
+manuscript/
+manuscript_overleaf/
+manuscript_overleaf.zip
+push_manuscript_to_overleaf.sh
+
+# Vendored raw code snapshots
+knowledge_base/raw/codes/tensorcircuit-ng/
+
+# Deprecated local-only material not included in the open-source mainline
+deprecated/

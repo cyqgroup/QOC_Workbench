@@ -1,0 +1,12 @@
+{
+  "task_id": "xxz_ring8_ground_state_preparation",
+  "source_paper": "papers/2603.15794v1.pdf",
+  "title": "Role of spectral structure in adiabatic ground-state preparation of the XXZ model",
+  "n_sites": 8,
+  "deltas": [0.5, 1.0, 1.5],
+  "total_time": 10.0,
+  "target_hamiltonian": "H_f = J sum_j (X_j X_{j+1} + Y_j Y_{j+1} + Delta Z_j Z_{j+1}) with periodic boundary conditions",
+  "baseline_protocols": ["SA", "SA+AH", "SA+CD", "OI", "OI+CD"],
+  "metrics": ["normalized_energy_distance", "adiabatic_fidelity"],
+  "relation_to_rydberg_mis": "Second LBI example. Rydberg MIS searches problem-encoding paths and local CD for graph optimization; this XXZ example stresses spectral engineering for many-body ground-state preparation."
+}

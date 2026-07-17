@@ -1,0 +1,68 @@
+[
+  {
+    "protocol": "Recorded baseline OI+AH+CD",
+    "N": "0.9469139068541426",
+    "F_ad": "0.9777312893165675",
+    "final_ground_fidelity": "0.840113079475467",
+    "final_energy": "-14.253773241679548",
+    "kind": "smooth",
+    "params": "[]",
+    "eta": "0.0",
+    "alpha": "-0.045093150475837604"
+  },
+  {
+    "protocol": "OI+AH+TargetCatalyst+commutator-CD",
+    "N": "0.9779033789346122",
+    "F_ad": "0.9791175740976055",
+    "final_ground_fidelity": "0.9687450554508392",
+    "final_energy": "-14.45843929411548",
+    "kind": "smooth",
+    "params": "[]",
+    "eta": "3.0",
+    "alpha": "-0.07"
+  },
+  {
+    "protocol": "target+mixed_power_p0.7_m0.5",
+    "N": "0.9870255892732491",
+    "F_ad": "0.9887184498221312",
+    "final_ground_fidelity": "0.9837219656455911",
+    "final_energy": "-14.518685779588065",
+    "kind": "mixed_power",
+    "params": "[0.7, 0.5]",
+    "eta": "3.0",
+    "alpha": "-0.07"
+  },
+  {
+    "protocol": "target+power_p1.2",
+    "N": "0.9897511009309501",
+    "F_ad": "0.9853184258133272",
+    "final_ground_fidelity": "0.9795664567535307",
+    "final_energy": "-14.536686076927797",
+    "kind": "power",
+    "params": "[1.2]",
+    "eta": "3.0",
+    "alpha": "-0.07"
+  },
+  {
+    "protocol": "target+mixed_power_p1.4_m0.5",
+    "N": "0.97904064297551",
+    "F_ad": "0.9865795652351087",
+    "final_ground_fidelity": "0.9397339538994411",
+    "final_energy": "-14.465950210765609",
+    "kind": "mixed_power",
+    "params": "[1.4, 0.5]",
+    "eta": "3.0",
+    "alpha": "-0.07"
+  },
+  {
+    "protocol": "target+sine_pos",
+    "N": "0.9818383932954992",
+    "F_ad": "0.9808159926504633",
+    "final_ground_fidelity": "0.956351855279005",
+    "final_energy": "-14.484427599222137",
+    "kind": "sine",
+    "params": "[0.04, 0.0, 0.0]",
+    "eta": "3.0",
+    "alpha": "-0.07"
+  }
+]

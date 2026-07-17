@@ -1,0 +1,102 @@
+{
+  "baseline": {
+    "protocol": "baseline_OI+AH+CD",
+    "kind": "smooth",
+    "params_json": "[]",
+    "eta": 0.0,
+    "alpha": -0.045093150475837604,
+    "cd_window": "none",
+    "N": 0.9469139069073568,
+    "F_ad": 0.9704850000671881,
+    "F_gs": 0.8401130796308474,
+    "final_energy": -14.25377324203099
+  },
+  "selected": [
+    {
+      "protocol": "baseline_OI+AH+CD",
+      "kind": "smooth",
+      "params_json": "[]",
+      "eta": 0.0,
+      "alpha": -0.045093150475837604,
+      "cd_window": "none",
+      "N": 0.9469139069073568,
+      "F_ad": 0.9704850000671881,
+      "F_gs": 0.8401130796308474,
+      "final_energy": -14.25377324203099
+    },
+    {
+      "protocol": "target_catalyst_smooth_cd",
+      "kind": "smooth",
+      "params_json": "[]",
+      "eta": 3.0,
+      "alpha": -0.07,
+      "cd_window": "none",
+      "N": 0.9779033790263637,
+      "F_ad": 0.9790129466276,
+      "F_gs": 0.9687450554976936,
+      "final_energy": -14.458439294721437
+    },
+    {
+      "protocol": "power_p1.2_cd",
+      "kind": "power",
+      "params_json": "[1.2]",
+      "eta": 3.0,
+      "alpha": -0.07,
+      "cd_window": "none",
+      "N": 0.9897511009309503,
+      "F_ad": 0.9824890135149755,
+      "F_gs": 0.9795664567535292,
+      "final_energy": -14.536686076927793
+    },
+    {
+      "protocol": "mix_win_p1.2_q0.25_eta4_alpha0",
+      "kind": "mixed_power",
+      "params_json": "[1.2, 0.25]",
+      "eta": 4.0,
+      "alpha": 0.0,
+      "cd_window": "sin2_pi_s",
+      "N": 0.985295878371082,
+      "F_ad": 0.986621194858975,
+      "F_gs": 0.9761451180607903,
+      "final_energy": -14.507262122505981
+    },
+    {
+      "protocol": "sine_win_a0.12_eta4_alpha-0.08",
+      "kind": "sine",
+      "params_json": "[0.12, 0, 0]",
+      "eta": 4.0,
+      "alpha": -0.08,
+      "cd_window": "sin2_pi_s",
+      "N": 0.9658388972691758,
+      "F_ad": 0.9703260811859428,
+      "F_gs": 0.9582798319553809,
+      "final_energy": -14.378760949458979
+    }
+  ],
+  "best_above_baseline_by_family": [
+    {
+      "protocol": "mix_win_p1.2_q0.25_eta4_alpha0",
+      "kind": "mixed_power",
+      "params_json": "[1.2, 0.25]",
+      "eta": 4.0,
+      "alpha": 0.0,
+      "cd_window": "sin2_pi_s",
+      "N": 0.985295878371082,
+      "F_ad": 0.986621194858975,
+      "F_gs": 0.9761451180607903,
+      "final_energy": -14.507262122505981
+    },
+    {
+      "protocol": "sine_win_a0.12_eta4_alpha-0.08",
+      "kind": "sine",
+      "params_json": "[0.12, 0, 0]",
+      "eta": 4.0,
+      "alpha": -0.08,
+      "cd_window": "sin2_pi_s",
+      "N": 0.9658388972691758,
+      "F_ad": 0.9703260811859428,
+      "F_gs": 0.9582798319553809,
+      "final_energy": -14.378760949458979
+    }
+  ]
+}

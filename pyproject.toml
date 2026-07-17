@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qoc-workbench"
+version = "0.1.0"
+description = "Auditable QOC Workbench for LLM-driven quantum optimal control protocol design."
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "pandas",
+  "pyyaml",
+  "jax",
+  "jaxlib",
+  "diffrax",
+  "tensorcircuit-ng",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

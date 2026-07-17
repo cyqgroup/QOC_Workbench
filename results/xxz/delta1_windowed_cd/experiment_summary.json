@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-06-25T17:35:27",
+  "delta": 1.0,
+  "T": 3.0,
+  "n_sites": 8,
+  "cd_window": "sin^2(pi s)",
+  "baseline": {
+    "protocol": "baseline_OI+AH+CD",
+    "kind": "smooth",
+    "params_json": "[]",
+    "eta": 0.0,
+    "alpha": -0.045093150475837604,
+    "cd_window": "none",
+    "N": 0.9469002644304123,
+    "F_ad": 0.9704383814377625,
+    "F_gs": 0.8400799595567865,
+    "final_energy": -14.253683142015918
+  },
+  "windowed_candidates_above_baseline": [
+    {
+      "protocol": "sine_a0.04_windowed_cd",
+      "kind": "sine",
+      "params_json": "[0.04, 0.0, 0.0]",
+      "eta": 3.0,
+      "alpha": -0.07,
+      "cd_window": "sin2_pi_s",
+      "N": 0.9408130575048979,
+      "F_ad": 0.9597075391860885,
+      "F_gs": 0.8781343588882315,
+      "final_energy": -14.213480953073471
+    }
+  ],
+  "source_artifact": "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260609_155720_xxz_t3_delta1_schedule_search",
+  "baseline_reproduction_artifact": "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260608_171738_xxz_paper_T3_reproduction"
+}

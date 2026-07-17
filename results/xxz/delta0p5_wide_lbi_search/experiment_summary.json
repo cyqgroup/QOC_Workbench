@@ -1,0 +1,154 @@
+{
+  "created_at": "2026-06-25T15:56:58",
+  "delta": 0.5,
+  "T": 3.0,
+  "n_sites": 8,
+  "baseline": "OI+AH+CD",
+  "baseline_metrics": {
+    "protocol": "baseline_OI+AH+CD",
+    "family": "baseline",
+    "kind": "smooth",
+    "params": {},
+    "eta": 0.0,
+    "alpha": 0.0,
+    "params_json": "{}",
+    "N": 0.9496348515769164,
+    "F_ad": 0.9655192628969586,
+    "F_gs": 0.8564989175815801,
+    "final_energy": -11.927530299399097
+  },
+  "num_coarse_candidates": 161,
+  "num_refined_candidates": 17,
+  "top4_improved": [
+    {
+      "protocol": "mixed_p0.7_q0.25_eta2",
+      "family": "mixed",
+      "kind": "mixed_power",
+      "params": {
+        "p": 0.7,
+        "q": 0.25
+      },
+      "eta": 2.0,
+      "alpha": 0.0,
+      "params_json": "{\"p\": 0.7, \"q\": 0.25}",
+      "N": 0.9944931421554365,
+      "F_ad": 0.9900260031526246,
+      "F_gs": 0.9881611172910623,
+      "final_energy": -12.302006295677934
+    },
+    {
+      "protocol": "mixed_p0.55_q0.25_eta1",
+      "family": "mixed",
+      "kind": "mixed_power",
+      "params": {
+        "p": 0.55,
+        "q": 0.25
+      },
+      "eta": 1.0,
+      "alpha": 0.0,
+      "params_json": "{\"p\": 0.55, \"q\": 0.25}",
+      "N": 0.9932453048123966,
+      "F_ad": 0.9893167084002495,
+      "F_gs": 0.9875945589265401,
+      "final_energy": -12.291589377730272
+    },
+    {
+      "protocol": "mixed_p0.55_q0.25_eta0.5",
+      "family": "mixed",
+      "kind": "mixed_power",
+      "params": {
+        "p": 0.55,
+        "q": 0.25
+      },
+      "eta": 0.5,
+      "alpha": 0.0,
+      "params_json": "{\"p\": 0.55, \"q\": 0.25}",
+      "N": 0.9936500199582471,
+      "F_ad": 0.9874991219612715,
+      "F_gs": 0.9865905244651288,
+      "final_energy": -12.294967930624217
+    },
+    {
+      "protocol": "mixed_p0.55_q0.25_eta1.5",
+      "family": "mixed",
+      "kind": "mixed_power",
+      "params": {
+        "p": 0.55,
+        "q": 0.25
+      },
+      "eta": 1.5,
+      "alpha": 0.0,
+      "params_json": "{\"p\": 0.55, \"q\": 0.25}",
+      "N": 0.992120398994603,
+      "F_ad": 0.9896200754172014,
+      "F_gs": 0.9852843684704322,
+      "final_energy": -12.28219868937801
+    }
+  ],
+  "source_reproduction": "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260608_171738_xxz_paper_T3_reproduction",
+  "diverse4_improved": [
+    {
+      "protocol": "mixed_p0.7_q0.25_eta2",
+      "family": "mixed",
+      "kind": "mixed_power",
+      "params_json": "{\"p\": 0.7, \"q\": 0.25}",
+      "eta": 2.0,
+      "alpha": 0.0,
+      "N": 0.9944931421554364,
+      "F_ad": 0.9900260031526246,
+      "F_gs": 0.9881611172910624,
+      "final_energy": -12.302006295677934,
+      "params": NaN
+    },
+    {
+      "protocol": "target_eta3_alpha-0.08",
+      "family": "target+CD",
+      "kind": "smooth",
+      "params_json": "{}",
+      "eta": 3.0,
+      "alpha": -0.08,
+      "N": 0.9694855102564116,
+      "F_ad": 0.970032767706941,
+      "F_gs": 0.9686267030617548,
+      "final_energy": -12.093243149575216,
+      "params": NaN
+    },
+    {
+      "protocol": "power_p1.6_eta2",
+      "family": "power",
+      "kind": "power",
+      "params_json": "{\"p\": 1.6}",
+      "eta": 2.0,
+      "alpha": 0.0,
+      "N": 0.9750432324881276,
+      "F_ad": 0.9776917767903326,
+      "F_gs": 0.9652274978942452,
+      "final_energy": -12.13963888920154,
+      "params": NaN
+    },
+    {
+      "protocol": "sine_a-0.1_eta0.5",
+      "family": "sine",
+      "kind": "sine",
+      "params_json": "{\"coeffs\": [-0.1]}",
+      "eta": 0.5,
+      "alpha": 0.0,
+      "N": 0.9491090625973139,
+      "F_ad": 0.9736419500609635,
+      "F_gs": 0.9224178243302219,
+      "final_energy": -11.923141024876376,
+      "params": {
+        "coeffs": [
+          -0.1
+        ]
+      }
+    }
+  ],
+  "additional_outputs": [
+    "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260625_155541_xxz_t3_delta0p5_wide_lbi_search/extra_refined_sine_candidates.csv",
+    "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260625_155541_xxz_t3_delta0p5_wide_lbi_search/refined_candidates_with_sine.csv",
+    "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260625_155541_xxz_t3_delta0p5_wide_lbi_search/diverse4_improved_for_plot.csv",
+    "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260625_155541_xxz_t3_delta0p5_wide_lbi_search/xxz_delta0p5_diverse4_improved_metrics.pdf",
+    "/Users/chenqinqin/Desktop/QAC_KB/qoc_lbi/artifacts/20260625_155541_xxz_t3_delta0p5_wide_lbi_search/xxz_delta0p5_diverse4_improved_metrics.png"
+  ]
+}

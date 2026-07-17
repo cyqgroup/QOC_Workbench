@@ -1,0 +1,370 @@
+{
+  "task_id": "rydberg_mis_c6",
+  "hardware_spec": "hardware_specs/rydberg.yaml",
+  "frozen_layers": {
+    "task_level": [
+      "objective_metric",
+      "public_inputs",
+      "forbidden_shortcuts",
+      "stop_rules",
+      "required_artifacts",
+      "hamiltonian_structure.problem_fixed_terms",
+      "hamiltonian_structure.hardware_fixed_terms"
+    ]
+  },
+  "editable_search_layers": {
+    "task_level": [
+      "protocol family",
+      "controllable Hamiltonian terms",
+      "optional auxiliary terms",
+      "time-dependent coefficient shapes",
+      "schedule/path design",
+      "total evolution time T",
+      "heuristic search scripts under run_dir"
+    ]
+  },
+  "reward_definition": {
+    "primary_reward": "final_ground_subspace_fidelity",
+    "degenerate_ground_space_reward": true
+  },
+  "search_preferences": {
+    "prefer_translation_symmetric_pauli_controls": true,
+    "translation_symmetry_only_if_compatible_with_task": true,
+    "prefer_smooth_hamiltonian_path": true,
+    "avoid_unnecessary_hard_restrictions": true,
+    "simplification_metric_tolerance": 0.001,
+    "metric_tie_tolerance": 1e-6,
+    "ranking_tie_break_order": [
+      "translation_symmetry_score",
+      "smoothness_score",
+      "simplicity_score"
+    ]
+  },
+  "objective_metric": "final_ground_subspace_fidelity",
+  "sim_budget": 500000,
+  "allowed_protocol_families": [
+    "interp",
+    "mc_itm",
+    "sta",
+    "aqc_d"
+  ],
+  "physical_params": {
+    "omega0": 1.0,
+    "delta0": 1.0,
+    "interaction_v": 10.0
+  },
+  "hamiltonian_structure": {
+    "problem_fixed_terms": [
+      "V * Sum_(i,j in E) n_i n_j"
+    ],
+    "hardware_fixed_terms": [],
+    "controllable_terms": [
+      "Omega(t)/2 * Sum_i X_i",
+      "-Delta(t) * Sum_i n_i"
+    ],
+    "optional_auxiliary_terms": [
+      "f_cd(t) * Sum_i Y_i"
+    ],
+    "forbidden_controllable_terms": [
+      "arbitrary ZZ couplings outside graph E",
+      "direct modification of interaction_v over time"
+    ]
+  },
+  "path_design_space": {
+    "editable": true,
+    "description": "Design Omega(t), Delta(t), and their joint path subject to hardware bounds."
+  },
+  "time_scale_design_space": {
+    "editable": true,
+    "allow_total_time_search": true,
+    "allow_segmentation": false
+  },
+  "run_search_directive_defaults": {
+    "allowed_parameterizations": {
+      "omega": ["trapezoid", "smooth", "smooth_beta", "fourier_enveloped", "piecewise_linear"],
+      "delta": ["linear", "smooth", "smooth_beta", "fourier_enveloped", "piecewise_linear"]
+    },
+    "allowed_cd_kinds": ["none", "acqc_j0", "acqc_j0_scaled", "y_sum_parameterized"],
+    "allowed_cd_orders": ["unspecified", "first_order"]
+  },
+  "candidate_specs": {
+    "channel_specs": {
+      "omega": {
+        "allowed_bases": [
+          "trapezoid",
+          "smooth",
+          "smooth_beta",
+          "fourier_enveloped",
+          "piecewise_linear"
+        ],
+        "param_schemas": {
+          "smooth_beta": {
+            "p": {"type": "float", "range": [1.0, 4.0], "required": true},
+            "q": {"type": "float", "range": [1.0, 4.0], "required": true}
+          },
+          "fourier_enveloped": {
+            "order": {"type": "int", "range": [1, 2], "required": true},
+            "a_cos": {"type": "float_list", "min_length": 1, "max_length": 2, "range": [-0.2, 0.2], "required": true},
+            "b_sin": {"type": "float_list", "min_length": 1, "max_length": 2, "range": [-0.2, 0.2], "required": true},
+            "envelope_power": {"type": "float", "range": [1.0, 2.5], "required": true},
+            "offset": {"type": "float", "range": [0.5, 1.0], "required": true}
+          },
+          "piecewise_linear": {
+            "knots": {
+              "type": "float_list",
+              "min_length": 3,
+              "max_length": 5,
+              "range": [0.0, 1.0],
+              "strictly_increasing": true,
+              "fixed_first": 0.0,
+              "fixed_last": 1.0,
+              "required": true
+            },
+            "values": {
+              "type": "float_list",
+              "same_length_as": "knots",
+              "range": [0.0, 1.0],
+              "fixed_first": 0.0,
+              "fixed_last": 0.0,
+              "required": true
+            }
+          }
+        }
+      },
+      "delta": {
+        "allowed_bases": [
+          "linear",
+          "smooth",
+          "smooth_beta",
+          "fourier_enveloped",
+          "piecewise_linear"
+        ],
+        "param_schemas": {
+          "smooth_beta": {
+            "a": {"type": "float", "range": [1.0, 4.0], "required": true},
+            "b": {"type": "float", "range": [1.0, 4.0], "required": true}
+          },
+          "fourier_enveloped": {
+            "order": {"type": "int", "range": [1, 2], "required": true},
+            "a_cos": {"type": "float_list", "min_length": 1, "max_length": 2, "range": [-0.15, 0.15], "required": true},
+            "b_sin": {"type": "float_list", "min_length": 1, "max_length": 2, "range": [-0.15, 0.15], "required": true},
+            "envelope_power": {"type": "float", "range": [1.0, 2.5], "required": true},
+            "offset": {"type": "float", "range": [-0.1, 0.1], "required": true}
+          },
+          "piecewise_linear": {
+            "knots": {
+              "type": "float_list",
+              "min_length": 3,
+              "max_length": 5,
+              "range": [0.0, 1.0],
+              "strictly_increasing": true,
+              "fixed_first": 0.0,
+              "fixed_last": 1.0,
+              "required": true
+            },
+            "values": {
+              "type": "float_list",
+              "same_length_as": "knots",
+              "range": [-1.0, 1.0],
+              "fixed_first": -1.0,
+              "fixed_last": 1.0,
+              "required": true
+            }
+          }
+        }
+      }
+    },
+    "cd_specs": {
+      "allowed_kinds": [
+        "none",
+        "acqc_j0",
+        "acqc_j0_scaled",
+        "y_sum_parameterized"
+      ],
+      "allowed_orders": ["unspecified", "first_order"],
+      "param_schemas": {
+        "acqc_j0_scaled": {
+          "alpha": {"type": "float", "range": [0.0, 1.2], "required": true}
+        },
+        "y_sum_parameterized": {
+          "basis": {
+            "type": "enum",
+            "choices": ["piecewise_linear", "smooth_beta", "fourier_enveloped"],
+            "required": true
+          },
+          "scale": {"type": "float", "range": [-0.25, 0.25], "required": true},
+          "order": {"type": "int", "range": [1, 2]},
+          "a_cos": {"type": "float_list", "min_length": 1, "max_length": 2, "range": [-0.15, 0.15]},
+          "b_sin": {"type": "float_list", "min_length": 1, "max_length": 2, "range": [-0.15, 0.15]},
+          "envelope_power": {"type": "float", "range": [1.0, 2.5]},
+          "p": {"type": "float", "range": [1.0, 4.0]},
+          "q": {"type": "float", "range": [1.0, 4.0]},
+          "knots": {
+            "type": "float_list",
+            "min_length": 3,
+            "max_length": 5,
+            "range": [0.0, 1.0],
+            "strictly_increasing": true,
+            "fixed_first": 0.0,
+            "fixed_last": 1.0
+          },
+          "values": {
+            "type": "float_list",
+            "same_length_as": "knots",
+            "range": [-0.15, 0.15],
+            "fixed_first": 0.0,
+            "fixed_last": 0.0
+          }
+        }
+      }
+    }
+  },
+  "evaluator_defaults": {
+    "n_steps_full": 200,
+    "n_steps_probe": 40,
+    "rtol_full": 1e-6,
+    "atol_full": 1e-6,
+    "rtol_probe": 1e-4,
+    "atol_probe": 1e-4
+  },
+  "pre_solver_validation": {
+    "time_series_sample_points": 128
+  },
+  "public_inputs": {
+    "n_qubits": 6,
+    "edges": [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 4],
+      [4, 5],
+      [5, 0]
+    ]
+  },
+  "baseline_candidate": {
+    "candidate_id": "baseline_linear_T2",
+    "family": "mc_itm",
+    "hardware": "rydberg",
+    "total_time": 2.0,
+    "channels": [
+      {"name": "omega", "basis": "trapezoid", "params": {}},
+      {"name": "delta", "basis": "linear", "params": {}}
+    ],
+    "cd": {"kind": "none", "ansatz": null, "order": null, "params": {}},
+    "constraints": {"omega_nonnegative": true},
+    "provenance": {"source": "task_spec_baseline"},
+    "notes": ["phase-1 baseline"]
+  },
+  "forbidden_shortcuts": [
+    "hidden_optimal_protocol",
+    "evaluator_modification",
+    "target_state_leakage"
+  ],
+  "stop_rules": [
+    {"rule": "budget_exhausted"},
+    {
+      "rule": "min_distinct_strategies_attempted",
+      "count": 10,
+      "mode_scope": "full",
+      "require_constraint_ok": true
+    },
+    {"rule": "target_metric_reached", "metric": "final_ground_subspace_fidelity", "threshold": 0.99}
+  ],
+  "continue_rules": [
+    {
+      "if_metric_below": 0.99,
+      "actions": [
+        "continue_exploration",
+        "try_alternative_protocol_family",
+        "increase_total_time"
+      ]
+    }
+  ],
+  "time_series_constraints": {
+    "omega": {
+      "nonnegative_over_time": true,
+      "value_range_over_time": [0.0, 1.0],
+      "start_value_range": [0.0, 0.05],
+      "end_value_range": [0.0, 0.05],
+      "max_abs_step": 0.2
+    },
+    "delta": {
+      "value_range_over_time": [-1.0, 1.0],
+      "start_value_range": [-1.05, -0.75],
+      "end_value_range": [0.75, 1.05],
+      "max_abs_step": 0.2
+    },
+    "cd": {
+      "value_range_over_time": [-0.3, 0.3],
+      "start_value_range": [-0.05, 0.05],
+      "end_value_range": [-0.05, 0.05],
+      "max_abs_step": 0.08
+    }
+  },
+  "required_artifacts": [
+    "protocol.py",
+    "heuristic_search.py",
+    "best_protocol.json",
+    "trials.jsonl",
+    "summary.csv",
+    "sample_efficiency.png",
+    "search_memory.md",
+    "search_state.json",
+    "latest_full_run_context.json",
+    "detector/latest.json",
+    "inspect/latest.json",
+    "edit_plan/latest.json",
+    "simplify/latest.json",
+    "target_fidelity_vs_time.png",
+    "instantaneous_ground_overlap_vs_time.png",
+    "schedule_shapes.png",
+    "hamiltonian_snapshots_real.png",
+    "hamiltonian_form.md",
+    "trajectory_diagnostics.npz",
+    "failure_notes.md",
+    "README.md"
+  ],
+  "required_full_run_diagnostics": {
+    "target_fidelity_vs_time": "overlap with final target ground-state subspace versus time",
+    "instantaneous_ground_overlap_vs_time": "overlap with instantaneous Hamiltonian ground-state subspace versus time",
+    "schedule_shapes": "all active control schedules versus time",
+    "hamiltonian_snapshots_real": "representative snapshots of the real part of H(t)",
+    "hamiltonian_form": "explicit formula for H(t) and all schedule components",
+    "trajectory_diagnostics": "raw arrays used to render all diagnostic plots"
+  },
+  "protected_paths": [
+    "src/qoc_lbi/evaluator.py",
+    "src/qoc_lbi/budget.py",
+    "src/qoc_lbi/constraints.py",
+    "src/qoc_lbi/stop_rules.py",
+    "src/qoc_lbi/rydberg_mis.py",
+    "src/qoc_lbi/rydberg_backend.py",
+    "examples/run_rydberg_baseline.py",
+    "examples/run_rydberg_search.py"
+  ],
+  "artifact_requirements": {
+    "full_run_must_include": [
+      "protocol.py",
+      "heuristic_search.py",
+      "best_protocol.json",
+      "trials.jsonl",
+      "summary.csv",
+      "sample_efficiency.png",
+      "search_memory.md",
+      "search_state.json",
+      "latest_full_run_context.json",
+      "detector/latest.json",
+      "inspect/latest.json",
+      "edit_plan/latest.json",
+      "simplify/latest.json",
+      "target_fidelity_vs_time.png",
+      "instantaneous_ground_overlap_vs_time.png",
+      "schedule_shapes.png",
+      "hamiltonian_snapshots_real.png",
+      "hamiltonian_form.md",
+      "trajectory_diagnostics.npz",
+      "failure_notes.md",
+      "README.md"
+    ]
+  }
+}

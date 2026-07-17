@@ -1,0 +1,445 @@
+[
+  {
+    "T": 8.0,
+    "candidate_id": "alpha_1.04_T8p0",
+    "final_fidelity": 0.7848197221755981,
+    "error": "",
+    "candidate": {
+      "candidate_id": "alpha_1.04_T8p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 8.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "smooth",
+          "params": {}
+        },
+        {
+          "name": "delta",
+          "basis": "smooth",
+          "params": {}
+        }
+      ],
+      "cd": {
+        "kind": "acqc_j0_scaled",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "alpha": 1.04
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  },
+  {
+    "T": 10.0,
+    "candidate_id": "alpha_1.04_T10p0",
+    "final_fidelity": 0.915160059928894,
+    "error": "",
+    "candidate": {
+      "candidate_id": "alpha_1.04_T10p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 10.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "smooth",
+          "params": {}
+        },
+        {
+          "name": "delta",
+          "basis": "smooth",
+          "params": {}
+        }
+      ],
+      "cd": {
+        "kind": "acqc_j0_scaled",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "alpha": 1.04
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  },
+  {
+    "T": 12.0,
+    "candidate_id": "alpha_0.6_T12p0",
+    "final_fidelity": 0.9149326086044312,
+    "error": "",
+    "candidate": {
+      "candidate_id": "alpha_0.6_T12p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 12.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "smooth",
+          "params": {}
+        },
+        {
+          "name": "delta",
+          "basis": "smooth",
+          "params": {}
+        }
+      ],
+      "cd": {
+        "kind": "acqc_j0_scaled",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "alpha": 0.6
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  },
+  {
+    "T": 14.0,
+    "candidate_id": "pw_rand_45_T14p0",
+    "final_fidelity": 0.9789564609527588,
+    "error": "",
+    "candidate": {
+      "candidate_id": "pw_rand_45_T14p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 14.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "piecewise_linear",
+          "params": {
+            "knots": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "values": [
+              0,
+              0.7,
+              1,
+              0.6,
+              0
+            ]
+          }
+        },
+        {
+          "name": "delta",
+          "basis": "piecewise_linear",
+          "params": {
+            "knots": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "values": [
+              -1,
+              -0.65,
+              0.0,
+              0.75,
+              1
+            ]
+          }
+        }
+      ],
+      "cd": {
+        "kind": "y_sum_parameterized",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "basis": "piecewise_linear",
+          "scale": 1.0,
+          "knots": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "values": [
+            0,
+            0.02,
+            0.05,
+            0.02,
+            0
+          ]
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  },
+  {
+    "T": 16.0,
+    "candidate_id": "pw_rand_10_T16p0",
+    "final_fidelity": 0.9536306858062744,
+    "error": "",
+    "candidate": {
+      "candidate_id": "pw_rand_10_T16p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 16.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "piecewise_linear",
+          "params": {
+            "knots": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "values": [
+              0,
+              0.46420673862605827,
+              0.9533853969772389,
+              0.7406500421669451,
+              0
+            ]
+          }
+        },
+        {
+          "name": "delta",
+          "basis": "piecewise_linear",
+          "params": {
+            "knots": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "values": [
+              -1,
+              -0.4139942989038728,
+              0.23444178525572265,
+              0.7204527361945492,
+              1
+            ]
+          }
+        }
+      ],
+      "cd": {
+        "kind": "y_sum_parameterized",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "basis": "piecewise_linear",
+          "scale": 1.0,
+          "knots": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "values": [
+            0,
+            -0.01744101065868425,
+            -0.04360252664671062,
+            -0.01744101065868425,
+            0
+          ]
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  },
+  {
+    "T": 18.0,
+    "candidate_id": "pw_rand_38_T18p0",
+    "final_fidelity": 0.9852371215820312,
+    "error": "",
+    "candidate": {
+      "candidate_id": "pw_rand_38_T18p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 18.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "piecewise_linear",
+          "params": {
+            "knots": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "values": [
+              0,
+              0.418784760408533,
+              0.7085013822387491,
+              0.8074791414479972,
+              0
+            ]
+          }
+        },
+        {
+          "name": "delta",
+          "basis": "piecewise_linear",
+          "params": {
+            "knots": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "values": [
+              -1,
+              -0.3673503107083328,
+              0.0037159627712989585,
+              0.5666595318563574,
+              1
+            ]
+          }
+        }
+      ],
+      "cd": {
+        "kind": "y_sum_parameterized",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "basis": "piecewise_linear",
+          "scale": 1.0,
+          "knots": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "values": [
+            0,
+            0.013812545418964872,
+            0.03453136354741218,
+            0.013812545418964872,
+            0
+          ]
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  },
+  {
+    "T": 20.0,
+    "candidate_id": "alpha_0.52_T20p0",
+    "final_fidelity": 0.9818295240402222,
+    "error": "",
+    "candidate": {
+      "candidate_id": "alpha_0.52_T20p0",
+      "task_id": "rydberg_mis_c6",
+      "family": "per_time_random_opt",
+      "hardware": "rydberg",
+      "total_time": 20.0,
+      "channels": [
+        {
+          "name": "omega",
+          "basis": "smooth",
+          "params": {}
+        },
+        {
+          "name": "delta",
+          "basis": "smooth",
+          "params": {}
+        }
+      ],
+      "cd": {
+        "kind": "acqc_j0_scaled",
+        "ansatz": null,
+        "order": "first_order",
+        "params": {
+          "alpha": 0.52
+        }
+      },
+      "constraints": {
+        "omega_nonnegative": true,
+        "interaction_v_time_independent": true
+      },
+      "provenance": {
+        "source": "codex_random_c6_per_time"
+      },
+      "notes": [
+        "per-total-time random protocol optimization",
+        "V fixed"
+      ]
+    }
+  }
+]

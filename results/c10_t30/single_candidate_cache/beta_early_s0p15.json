@@ -1,0 +1,52 @@
+{
+  "candidate_id": "beta_early_s0p15",
+  "family": "smooth_beta_global_y",
+  "ok": true,
+  "error": "",
+  "elapsed_s": 50.28206992149353,
+  "final_fidelity": 0.9275426864624023,
+  "max_fidelity": 0.92864990234375,
+  "gain_vs_acqc": 0.06314245765591653,
+  "gain_vs_prior": 0.012069324114467594,
+  "candidate": {
+    "candidate_id": "beta_early_s0p15",
+    "task_id": "rydberg_mis_c10",
+    "family": "smooth_beta_global_y",
+    "hardware": "rydberg",
+    "total_time": 30.0,
+    "channels": [
+      {
+        "name": "omega",
+        "basis": "smooth",
+        "params": {}
+      },
+      {
+        "name": "delta",
+        "basis": "smooth",
+        "params": {}
+      }
+    ],
+    "cd": {
+      "kind": "y_sum_parameterized",
+      "ansatz": null,
+      "order": "first_order",
+      "params": {
+        "basis": "smooth_beta",
+        "scale": 0.15,
+        "p": 1.6,
+        "q": 2.4
+      }
+    },
+    "constraints": {
+      "omega_nonnegative": true,
+      "interaction_v_time_independent": true,
+      "auxiliary_terms": "global one-body Y quadrature only"
+    },
+    "provenance": {
+      "source": "run_single_c10_candidate"
+    },
+    "notes": [
+      "single candidate C10 refinement"
+    ]
+  }
+}
